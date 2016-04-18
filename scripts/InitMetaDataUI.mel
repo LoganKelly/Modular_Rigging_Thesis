@@ -1,0 +1,14 @@
+//creates the UI used by the MetaDataNode plugin
+global proc InitMetaDataUI() {
+	global int $gMetaMenuExists;
+	global string $gMetaMenuName;
+	global string $gMetaMenuItemName;
+
+	if($gMetaMenuExists == 0) {
+		python "MDMwindow = mdm.MetaDataManager()";
+		$gMetaMenuName = `menu -label "MetaData Rigging" -p MayaWindow -tearOff true`;
+		$gMetaMenuItemName = `menuItem -label "Rig Manager" -c "python \"MDMwindow.show()\"; python \"MDMwindow.activateWindow()\""`;		
+		$gMetaMenuExists = 1;
+	}
+	python "MDMwindow.update()";
+}

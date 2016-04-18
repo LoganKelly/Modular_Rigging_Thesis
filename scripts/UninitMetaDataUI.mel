@@ -1,0 +1,13 @@
+
+//deletes the UI used by the MetaDataNode plugin
+global proc UninitMetaDataUI() {
+	global int $gMetaMenuExists;	
+	global string $gMetaMenuName;
+	global string $gMetaMenuItemName;
+
+	if($gMetaMenuExists == 1) {
+		deleteUI -mi $gMetaMenuItemName;
+		deleteUI -m $gMetaMenuName;
+		$gMetaMenuExists = 0;
+	}
+}

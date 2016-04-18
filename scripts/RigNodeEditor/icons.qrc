@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="/" >
+    <file alias="rigInputConnection.svg">images/rigInputConnection.svg</file>
+    <file alias="geometryOutputConnection.svg">images/geometryOutputConnection.svg</file>
+    <file alias="componentInputConnection.svg">images/componentInputConnection.svg</file>
+    <file alias="componentOutputConnection.svg">images/componentOutputConnection.svg</file>
+    <file alias="rigNode.svg">images/rigNode.svg</file>
+    <file alias="rigNodeList.svg">images/rigNodeList.svg</file>
+    <file alias="geometryNode.svg">images/geometryNode.svg</file>
+    <file alias="componentNode.svg">images/componentNode.svg</file>
+</qresource>
+</RCC>

@@ -1,0 +1,17 @@
+Steps for creating a GUI node:
+==============================
+
+1. Create an SVG file for the node graphic
+2. Create a .ui file for the node widget in the channel box
+3. Use pyuic4 command on the .ui file and move the file to RigNodeEditor/Nodes/
+4. Add an entry to the NodeTypes list
+5. Update the icons.qrc file with the svg file path so that the ":/" notation will work
+6. Run pyrcc4 command on the icons.qrc file, and move the resulting file to designer/icons.py
+7. Create a *GuiNodeWidget class, make sure to import the python file generate from the .ui file
+8. Add the *GuiNodeWidget class to the list of imports for the NodeTypes module
+9. Create a *GuiNode class
+10. Add the *GuiNode class to the list of imports for the SceneView
+11. Add a case for the specific *GuiNode type to the createNode function in SceneView
+12. Add a case to the populateListWidget function of NodeList for the new node type
+13. Add a case to the recursiveNodeCreate function of RigNodeEditor for the new node type
+13. You will need to close and re-open Maya for the icons to appear (don't know why this is the case)
